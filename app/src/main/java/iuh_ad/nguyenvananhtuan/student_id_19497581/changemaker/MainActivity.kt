@@ -1,11 +1,10 @@
 package iuh_ad.nguyenvananhtuan.student_id_19497581.changemaker
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-import kotlin.math.round
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var unformattedTxtInput: String = ""
@@ -17,10 +16,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         R.id.txtAmount25cents,
         R.id.txtAmount10cents,
         R.id.txtAmount5cents,
-        R.id.txtAmount1cent)
+        R.id.txtAmount1cent
+    )
     private val numbers = arrayOf(20.0, 10.0, 5.0, 1.0, 0.25, 0.1, 0.05, 0.01)
-    private val MAXTEXTVIEW = 8
-
+    private val maxTextview = 8
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,12 +41,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
-        val txtInput: TextView = findViewById(R.id.txtInput)
-        outState.putString("txtInput", txtInput.text.toString())
+        outState.putString("txtInput", findViewById<TextView>(R.id.txtInput).text.toString())
 
-        for (id in elements.indices) {
-            val elementAmount: TextView = findViewById(elements[id])
-            outState.putString("priceElement$id", elementAmount.text.toString())
+        elements.forEachIndexed { id, el ->
+            outState.putString(
+                "priceElement$id",
+                findViewById<TextView>(el).text.toString()
+            )
         }
 
         outState.putString("unformattedTxtInput", unformattedTxtInput)
@@ -57,12 +57,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        var elementAmount: TextView = findViewById(R.id.txtInput)
-        elementAmount.text = savedInstanceState.getString("txtInput")
+        findViewById<TextView>(R.id.txtInput).text = savedInstanceState.getString("txtInput")
 
-        for (id in elements.indices) {
-            var elementAmount: TextView = findViewById(elements[id])
-            elementAmount.text = savedInstanceState.getString("priceElement$id")
+        elements.forEachIndexed { id, el ->
+            findViewById<TextView>(el).text = savedInstanceState.getString("priceElement$id")
         }
 
         unformattedTxtInput = savedInstanceState.getString("unformattedTxtInput").toString()
@@ -70,52 +68,40 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         val value = getValue(v)
-        var txtInput: TextView = findViewById(R.id.txtInput)
+        val txtInput: TextView = findViewById(R.id.txtInput)
 
         // update value
-        if (value == -1) {
-            unformattedTxtInput = ""
+        if (value == "-1") {
             txtInput.text = ""
-            elements.forEach { it ->
-                var elementAmount: TextView = findViewById(it)
-                elementAmount.text = "0"
-            }
+            unformattedTxtInput = ""
+            elements.forEach { it -> findViewById<TextView>(it).text = "0" }
             return
         } else {
-            if (unformattedTxtInput.length > MAXTEXTVIEW) {
-                Toast.makeText(this@MainActivity, "Số quá lớn, ứng dụng chưa hỗ trợ", Toast.LENGTH_SHORT).show()
+            if (unformattedTxtInput.length > maxTextview) {
+                Toast.makeText(
+                    this@MainActivity,
+                    "Số quá lớn, ứng dụng chưa hỗ trợ",
+                    Toast.LENGTH_SHORT
+                ).show()
                 return
             }
-            unformattedTxtInput += value.toString()
-            unformattedTxtInput = unformattedTxtInput.toInt().toString()
+            unformattedTxtInput = (unformattedTxtInput + value).toInt().toString()
         }
-        var parsedNumber = unformattedTxtInput.toDouble() / 100.0
-        parsedNumber = round(parsedNumber * 100) / 100
+        var parsedNumber = unformattedTxtInput.toDouble() / 100
         txtInput.text = parsedNumber.toString()
 
         // processing step
-
         for (i in numbers.indices) {
-            var amounts = (parsedNumber / numbers[i]).toInt()
-            var elementAmount: TextView = findViewById(elements[i])
-            elementAmount.text = amounts.toString()
+            val amounts = (parsedNumber / numbers[i]).toInt().toString()
+            findViewById<TextView>(elements[i]).text = amounts
             parsedNumber -= amounts.toDouble() * numbers[i]
         }
     }
 
-    fun getValue(v: View): Int {
+    fun getValue(v: View): String {
         return when (v.id) {
-            R.id.btn0 -> 0
-            R.id.btn1 -> 1
-            R.id.btn2 -> 2
-            R.id.btn3 -> 3
-            R.id.btn4 -> 4
-            R.id.btn5 -> 5
-            R.id.btn6 -> 6
-            R.id.btn7 -> 7
-            R.id.btn8 -> 8
-            R.id.btn9 -> 9
-            else -> -1
+            R.id.btnClear -> "-1"
+            else -> (v as TextView).text.toString()
         }
     }
 }
