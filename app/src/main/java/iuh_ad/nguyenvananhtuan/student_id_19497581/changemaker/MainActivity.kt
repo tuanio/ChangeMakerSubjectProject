@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             findViewById(R.id.btn8),
             findViewById(R.id.btn9),
             findViewById(R.id.btnClear)
-        ).forEach { it -> it.setOnClickListener(this) }
+        ).forEach { it.setOnClickListener(this) }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -74,13 +74,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         if (value == "-1") {
             txtInput.text = ""
             unformattedTxtInput = ""
-            elements.forEach { it -> findViewById<TextView>(it).text = "0" }
+            elements.forEach { findViewById<TextView>(it).text = "0" }
             return
         } else {
             if (unformattedTxtInput.length > maxTextview) {
                 Toast.makeText(
                     this@MainActivity,
-                    "Số quá lớn, ứng dụng chưa hỗ trợ",
+                    "The number seems too large!",
                     Toast.LENGTH_SHORT
                 ).show()
                 return
@@ -91,10 +91,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         txtInput.text = parsedNumber.toString()
 
         // processing step
-        for (i in numbers.indices) {
-            val amounts = (parsedNumber / numbers[i]).toInt().toString()
-            findViewById<TextView>(elements[i]).text = amounts
-            parsedNumber -= amounts.toDouble() * numbers[i]
+        numbers.forEachIndexed { id, it ->
+            val amounts = (parsedNumber / it).toInt().toString()
+            findViewById<TextView>(elements[id]).text = amounts
+            parsedNumber -= amounts.toDouble() * it
         }
     }
 

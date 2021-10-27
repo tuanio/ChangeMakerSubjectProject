@@ -8,108 +8,91 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="298dp"
-        android:layout_height="238dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/ConstraintLayoutStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
         <Button
             android:id="@+id/btn8"
-            android:layout_width="60dp"
+            style="@style/NumberBtnStyle"
             android:layout_height="@dimen/btnHeight"
-            android:layout_marginEnd="15dp"
-            android:backgroundTint="#d6d7d7"
+            android:layout_marginEnd="@dimen/btnMarginEndRight"
             android:text="@string/_8"
-            android:textColor="#795548"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn4" />
 
         <Button
             android:id="@+id/btn1"
-            android:layout_width="60dp"
+            style="@style/NumberBtnStyle"
             android:layout_height="@dimen/btnHeight"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="#d6d7d7"
+            android:layout_marginStart="@dimen/btnMarginStart"
+            android:layout_marginTop="@dimen/btnMarginTop"
+            android:layout_marginEnd="@dimen/btnMarginEndMiddle"
             android:text="@string/_1"
-            android:textColor="#795548"
             app:layout_constraintEnd_toStartOf="@+id/btn2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btn3"
-            android:layout_width="60dp"
+            style="@style/NumberBtnStyle"
             android:layout_height="@dimen/btnHeight"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="#d6d7d7"
+            android:layout_marginTop="@dimen/btnMarginTop"
+            android:layout_marginEnd="@dimen/btnMarginEndMiddle"
             android:text="@string/_3"
-            android:textColor="#795548"
             app:layout_constraintEnd_toStartOf="@+id/btn4"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btn6"
-            android:layout_width="60dp"
+            style="@style/NumberBtnStyle"
             android:layout_height="@dimen/btnHeight"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="#d6d7d7"
+            android:layout_marginEnd="@dimen/btnMarginEndMiddle"
             android:text="@string/_6"
-            android:textColor="#795548"
             app:layout_constraintEnd_toStartOf="@+id/btn7"
             app:layout_constraintTop_toBottomOf="@+id/btn2" />
 
         <Button
             android:id="@+id/btn5"
-            android:layout_width="60dp"
+            style="@style/NumberBtnStyle"
             android:layout_height="@dimen/btnHeight"
-            android:layout_marginStart="18dp"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="#d6d7d7"
+            android:layout_marginStart="@dimen/btnMarginStart"
+            android:layout_marginEnd="@dimen/btnMarginEndMiddle"
             android:text="@string/_5"
-            android:textColor="#795548"
             app:layout_constraintEnd_toStartOf="@+id/btn6"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn1" />
 
         <Button
             android:id="@+id/btn4"
-            android:layout_width="60dp"
+            style="@style/NumberBtnStyle"
             android:layout_height="@dimen/btnHeight"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="15dp"
-            android:backgroundTint="#d6d7d7"
+            android:layout_marginTop="@dimen/btnMarginTop"
+            android:layout_marginEnd="@dimen/btnMarginEndRight"
             android:text="@string/_4"
-            android:textColor="#795548"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btn7"
-            android:layout_width="60dp"
+            style="@style/NumberBtnStyle"
             android:layout_height="@dimen/btnHeight"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="#d6d7d7"
+            android:layout_marginEnd="@dimen/btnMarginEndMiddle"
             android:text="@string/_7"
-            android:textColor="#795548"
             app:layout_constraintEnd_toStartOf="@+id/btn8"
             app:layout_constraintTop_toBottomOf="@+id/btn3" />
 
         <Button
             android:id="@+id/btn9"
-            android:layout_width="60dp"
+            style="@style/NumberBtnStyle"
             android:layout_height="@dimen/btnHeight"
-            android:layout_marginStart="18dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="#d6d7d7"
+            android:layout_marginStart="@dimen/btnMarginStart"
+            android:layout_marginEnd="@dimen/btnMarginEndMiddle"
+            android:layout_marginBottom="@dimen/btnMarginBottom"
             android:text="@string/_9"
-            android:textColor="#795548"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn0"
             app:layout_constraintStart_toStartOf="parent"
@@ -117,26 +100,23 @@
 
         <Button
             android:id="@+id/btnClear"
-            android:layout_width="128dp"
+            style="@style/GeneralBtn"
+            android:layout_width="@dimen/btnClearWidth"
             android:layout_height="@dimen/btnHeight"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="#d6d7d7"
+            android:layout_marginEnd="@dimen/btnMarginEndRight"
+            android:layout_marginBottom="@dimen/btnMarginBottom"
             android:text="@string/clear"
-            android:textColor="#795548"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn8" />
 
         <Button
             android:id="@+id/btn0"
-            android:layout_width="60dp"
+            style="@style/NumberBtnStyle"
             android:layout_height="@dimen/btnHeight"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="#d6d7d7"
+            android:layout_marginEnd="@dimen/btnMarginEndMiddle"
+            android:layout_marginBottom="@dimen/btnMarginBottom"
             android:text="@string/_0"
-            android:textColor="#795548"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnClear"
             app:layout_constraintTop_toBottomOf="@+id/btn6"
@@ -144,13 +124,11 @@
 
         <Button
             android:id="@+id/btn2"
-            android:layout_width="60dp"
+            style="@style/NumberBtnStyle"
             android:layout_height="@dimen/btnHeight"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="#d6d7d7"
+            android:layout_marginTop="@dimen/btnMarginTop"
+            android:layout_marginEnd="@dimen/btnMarginEndMiddle"
             android:text="@string/_2"
-            android:textColor="#795548"
             app:layout_constraintEnd_toStartOf="@+id/btn3"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -158,22 +136,18 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
-        android:layout_width="110dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
+        style="@style/ConstraintLayout3Style"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
         app:layout_constraintVertical_bias="0.503">
 
         <TextView
+            style="@style/Txt10centsStyle"
             android:id="@+id/txt10cents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="8dp"
             android:text="@string/_10cents"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintEnd_toStartOf="@+id/txtAmount10cents"
@@ -181,23 +155,21 @@
             app:layout_constraintTop_toBottomOf="@+id/txt25cents" />
 
         <TextView
+            style="@style/TxtAmount25centsStyle"
             android:id="@+id/txtAmount25cents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/zeroLabelMarginEnd"
             android:text="@string/label_0"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            style="@style/Txt25centsStyle"
             android:id="@+id/txt25cents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="8dp"
             android:text="@string/_25cents"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintEnd_toStartOf="@+id/txtAmount25cents"
@@ -205,11 +177,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            style="@style/TxtAmount5centsStyle"
             android:id="@+id/txtAmount5cents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/zeroLabelMarginEnd"
             android:text="@string/label_0"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintEnd_toEndOf="parent"
@@ -219,9 +191,7 @@
             android:id="@+id/txt5cents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="8dp"
+            style="@style/Txt5centsStyle"
             android:text="@string/_5cents"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintEnd_toStartOf="@+id/txtAmount5cents"
@@ -229,12 +199,11 @@
             app:layout_constraintTop_toBottomOf="@+id/txt10cents" />
 
         <TextView
+            style="@style/TxtAmount1centStyle"
             android:id="@+id/txtAmount1cent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="@dimen/zeroLabelMarginEnd"
             android:text="@string/label_0"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -242,24 +211,21 @@
             app:layout_constraintTop_toBottomOf="@+id/txtAmount5cents" />
 
         <TextView
+            style="@style/TxtAmount10centsStyle"
             android:id="@+id/txtAmount10cents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/zeroLabelMarginEnd"
             android:text="@string/label_0"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtAmount25cents" />
 
         <TextView
+            style="@style/Txt1centStyle"
             android:id="@+id/txt1cent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="10dp"
             android:text="@string/_1cent"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -270,47 +236,41 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="120dp"
-        android:layout_height="160dp"
-        android:layout_marginStart="133dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="40dp"
+        style="@style/ConstraintLayout4Style"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
-        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintHorizontal_bias="0.802"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.576">
+        app:layout_constraintVertical_bias="0.546">
 
         <TextView
+            style="@style/Txt20dollarsStyle"
             android:id="@+id/txt20dollars"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
             android:text="@string/_20dollars"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            style="@style/Txt10dollarsStyle"
             android:id="@+id/txt10dollars"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
             android:text="@string/_10dollars"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt20dollars" />
 
         <TextView
+            style="@style/TxtAmount10dollarsStyle"
             android:id="@+id/txtAmount10dollars"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="@dimen/zeroLabelMarginEnd"
             android:text="@string/label_0"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintEnd_toEndOf="parent"
@@ -319,27 +279,24 @@
             app:layout_constraintTop_toBottomOf="@+id/txtAmount20dollars" />
 
         <TextView
+            style="@style/TxtAmount20dollarsStyle"
             android:id="@+id/txtAmount20dollars"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="6dp"
+            android:layout_marginEnd="@dimen/zeroLabelMarginEnd"
             android:text="@string/label_0"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.782"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/txt20dollars"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            style="@style/TxtAmount1dollarStyle"
             android:id="@+id/txtAmount1dollar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="@dimen/zeroLabelMarginEnd"
             android:text="@string/label_0"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -350,12 +307,11 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <TextView
+            style="@style/TxtAmount5dollarsStyle"
             android:id="@+id/txtAmount5dollars"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="@dimen/zeroLabelMarginEnd"
             android:text="@string/label_0"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintEnd_toEndOf="parent"
@@ -364,23 +320,20 @@
             app:layout_constraintTop_toBottomOf="@+id/txtAmount10dollars" />
 
         <TextView
+            style="@style/Txt5dollarsStyle"
             android:id="@+id/txt5dollars"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="12dp"
             android:text="@string/_5dollars"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt10dollars" />
 
         <TextView
+            style="@style/Txt1dollarStyle"
             android:id="@+id/txt1dollar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="10dp"
             android:text="@string/_1dollar"
             android:textSize="@dimen/txtPriceHeight"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -391,39 +344,33 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/ConstraintLayout2Style"
         android:id="@+id/constraintLayout2"
-        android:layout_width="313dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="124dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.151">
 
         <TextView
+            style="@style/TxtInputStyle"
             android:id="@+id/txtInput"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:minWidth="300dp"
-            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.555"
+            tools:layout_editor_absoluteX="0dp"
             tools:text="0.00" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
+        style="@style/TxtPriceStyle"
         android:id="@+id/txtPrice"
-        android:layout_width="59dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="59dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/price"
         android:textAlignment="gravity"
-        android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

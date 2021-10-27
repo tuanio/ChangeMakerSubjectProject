@@ -2,4 +2,231 @@
 <resources>
     <dimen name="btnHeight">70dp</dimen>
     <dimen name="txtPriceHeight">20sp</dimen>
+
+<!--    constraintLayout-->
+    <dimen name="constraintLayoutWidth">226dp</dimen>
+    <dimen name="constraintLayoutHeight">310dp</dimen>
+    <dimen name="constraintLayoutMarginEnd">22dp</dimen>
+
+<!--    0-9 button-->
+    <dimen name="btnNumberWidth">60dp</dimen>
+    <dimen name="btnClearWidth">128dp</dimen>
+<!--    btn 1 -->
+    <dimen name="btn1MarginTop">12dp</dimen>
+    <dimen name="btn1MarginEnd">8dp</dimen>
+<!--    btn 2-->
+    <dimen name="btn2MarginTop">12dp</dimen>
+    <dimen name="btn2MarginEnd">8dp</dimen>
+<!--    btn 3-->
+    <dimen name="btn3MarginTop">12dp</dimen>
+    <dimen name="btn3MarginEnd">12dp</dimen>
+<!--    btn 4-->
+    <dimen name="btn4MarginEnd">8dp</dimen>
+<!--    btn 5-->
+    <dimen name="btn5MarginEnd">8dp</dimen>
+<!--    btn 6-->
+    <dimen name="btn6MarginEnd">12dp</dimen>
+<!--    btn 7-->
+    <dimen name="btn7MarginEnd">8dp</dimen>
+<!--    btn 8-->
+    <dimen name="btn8MarginEnd">8dp</dimen>
+<!--    btn 9-->
+    <dimen name="btn9MarginEnd">12dp</dimen>
+<!--    btn 0-->
+    <dimen name="btn0MarginEnd">8dp</dimen>
+    <dimen name="btn0MarginBottom">12dp</dimen>
+<!--    btn clear-->
+    <dimen name="btnClearMarginEnd">12dp</dimen>
+    <dimen name="btnClearMarginBottom">12dp</dimen>
+
+<!--    txtInput-->
+    <dimen name="txtInputLayoutHeight">30dp</dimen>
+    <dimen name="txtInputMaxWidth">280dp</dimen>
+    <dimen name="txtInputMinWidth">200dp</dimen>
+    <dimen name="txtInputTextSize">24sp</dimen>
+
+<!--    constraintLayout2-->
+    <dimen name="constraintLayout2LayoutWidth">249dp</dimen>
+    <dimen name="constraintLayout2LayoutHeight">46dp</dimen>
+    <dimen name="constraintLayout2LayoutMarginTop">148dp</dimen>
+    <dimen name="constraintLayout2LayoutMarginEnd">16dp</dimen>
+<!--    txtPrice-->
+    <dimen name="txtPriceConstraintHorizontalBias">0.0</dimen>
+    <dimen name="txtPriceMarginStart">65dp</dimen>
+    <dimen name="txtPriceMarginTop">156dp</dimen>
+    <dimen name="txtPriceMarginEnd">48dp</dimen>
+    <dimen name="txtPriceTextSize">24sp</dimen>
+<!--    txt20dollars-->
+    <dimen name="txt20dollarsMarginStart">16dp</dimen>
+    <dimen name="txt20dollarsMarginTop">12dp</dimen>
+<!--    txt10dollars-->
+    <dimen name="txt10dollarsMarginStart">16dp</dimen>
+    <dimen name="txt10dollarsMarginTop">12dp</dimen>
+<!--    txt25cents-->
+    <dimen name="txt25centsMarginStart">16dp</dimen>
+    <dimen name="txt25centsMarginTop">12dp</dimen>
+<!--    txt10cents-->
+    <dimen name="txt10centsMarginStart">16dp</dimen>
+    <dimen name="txt10centsMarginTop">12dp</dimen>
+<!--    txt5dollars-->
+    <dimen name="txt5dollarsMarginStart">24dp</dimen>
+    <dimen name="txt5dollarsMarginTop">12dp</dimen>
+<!--    txt1dollars-->
+    <dimen name="txt1dollarMarginStart">24dp</dimen>
+    <dimen name="txt1dollarMarginTop">12dp</dimen>
+<!--    txt5cents-->
+    <dimen name="txt5centsMarginStart">28dp</dimen>
+    <dimen name="txt5centsMarginTop">12dp</dimen>
+<!--    txt1cent-->
+    <dimen name="txt1centMarginStart">28dp</dimen>
+    <dimen name="txt1centMarginTop">12dp</dimen>
+<!--    general txtAmount-->
+    <dimen name="txtAmountMarginStart">35dp</dimen>
+    <dimen name="txtAmountMarginTop">12dp</dimen>
+    <dimen name="txtAmountMarginEnd">30dp</dimen>
+<!--    constraintLayout-->
+    <dimen name="constraintLayoutLayoutWidth">150dp</dimen>
+    <dimen name="constraintLayoutLayoutHeight">340dp</dimen>
+    <dimen name="constraintLayoutLayoutMarginStart">5dp</dimen>
+    <dimen name="constraintLayoutLayoutMarginTop">50dp</dimen>
+    <dimen name="constraintLayoutLayoutMarginEnd">8dp</dimen>
+    <dimen name="constraintLayoutLayoutMarginBottom">108dp</dimen>
+
+<!--    land-->
+<!--    number btn-->
+    <style name="GeneralBtn">
+        <item name="android:textColor">#795548</item>
+        <item name="android:backgroundTint">#d6d7d7</item>
+    </style>
+    <style name="NumberBtnStyle" parent="@style/GeneralBtn">
+        <item name="android:layout_width">60dp</item>
+    </style>
+
+    <dimen name="btnMarginTop">16dp</dimen>
+    <dimen name="btnMarginBottom">12dp</dimen>
+    <dimen name="btnMarginStart">18dp</dimen>
+    <dimen name="btnMarginEndMiddle">8dp</dimen>
+    <dimen name="btnMarginEndRight">15dp</dimen>
+
+    <style name="TxtPriceStyle">
+        <item name="android:layout_marginStart">176dp</item>
+        <item name="android:layout_marginTop">64dp</item>
+        <item name="android:layout_marginEnd">59dp</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TxtInputStyle">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:minWidth">300dp</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <dimen name="zeroLabelMarginEnd">10dp</dimen>
+
+    <style name="ConstraintLayoutStyle">
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginEnd">80dp</item>
+    </style>
+
+    <style name="ConstraintLayout3Style">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:layout_width">110dp</item>
+    </style>
+
+    <style name="Txt10centsStyle">
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginStart">9dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+
+    <style name="TxtAmount25centsStyle">
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="Txt25centsStyle">
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginStart">9dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+
+    <style name="TxtAmount5centsStyle">
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="Txt5centsStyle">
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginStart">21dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+
+    <style name="TxtAmount1centStyle">
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="TxtAmount10centsStyle">
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="Txt1centStyle">
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginStart">21dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="ConstraintLayout4Style">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_marginStart">50dp</item>
+        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:layout_marginEnd">40dp</item>
+    </style>
+
+    <style name="Txt20dollarsStyle">
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+    <style name="Txt10dollarsStyle">
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="TxtAmount10dollarsStyle">
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="TxtAmount20dollarsStyle">
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+    <style name="TxtAmount1dollarStyle">
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="TxtAmount5dollarsStyle">
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="Txt5dollarsStyle">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="Txt1dollarStyle">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="ConstraintLayout2Style">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginEnd">124dp</item>
+    </style>
 </resources>
